@@ -1,0 +1,47 @@
+{
+    "key": "group_650b1f87adb5c",
+    "title": "Case Results",
+    "fields": [
+        {
+            "key": "field_650b1f876595c",
+            "label": "Case Result Value",
+            "name": "case_result_value",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Add a dollar amount (without punctuation) in this box if there was a monetary value attached to this result",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "results"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695227980
+}

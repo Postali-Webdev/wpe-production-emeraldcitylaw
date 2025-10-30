@@ -1,0 +1,391 @@
+/**
+ * Page Template Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+*/
+
+.page-template-page-contact {
+    .sidebar-block {
+        iframe {
+            height:250px;
+            max-width: 100%;
+        }
+    }
+}
+
+.page-template-page-sitemap {
+    .main-content {
+        .column-66 {
+            justify-content: space-between;
+        }
+    }
+    
+    ul.sitemap {
+        li {
+            a {
+                font-weight: bold;
+            }
+
+            &.page_item_has_children {
+                ul.children {
+                    margin-bottom: 5px;
+                    
+                    li {
+                        a {
+                            font-weight: normal !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    article {
+        border: none;
+        padding-bottom: 0;
+        width: 31%;
+        margin: 1.3% 1%;
+        box-sizing: border-box;
+        transition:$trans;
+
+        &:hover {
+            h2 {
+                text-decoration: underline;
+            }
+
+            .post-image {
+                background-size: 109%;
+            }
+        }
+
+        @include respond(tab-port) {
+            width:100%;
+            margin:10px 0;
+        }
+
+        .post-image {
+            height: 200px;
+            background-size: 104%;
+            background-position: center;
+            transition: $trans;
+
+            @include respond(tab-port) {
+                background-size: cover !important;
+            }
+        }
+
+        .meta-content {
+            padding: 30px 40px 70px;
+
+            @include respond(tab-port) {
+                padding: 30px 40px 50px;
+            }
+            
+            .blog-date {
+                font-size: 12px;
+                margin-bottom: 5px !important;
+                color:$white;
+            }
+            
+            h2 {  
+                font-size: 24px;
+                margin-bottom: 0 !important;
+                color:$white;
+                text-transform: uppercase;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.single {
+    .article-single-featured-image {
+        img {
+            width:100%;
+        }
+    }
+}
+
+.page-template-page-attorney {
+    img.attorney-img {
+        border-radius: 50%;
+        max-width: 225px;
+        
+        @include respond(phone) {
+            margin:0 auto;
+        }
+    }
+}
+
+.page-template-page-landing {
+
+    ul.landing-box {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin:0;
+        width:100%;
+        
+        li {
+            width:32.3%;
+            margin:.5% !important;
+            padding:40px;
+            box-sizing: border-box;
+            min-height: 350px;
+            position: relative;
+
+            @include respond(tab-port) {
+                width:49%;
+            }
+
+            @include respond(phone) {
+                width:100%;
+                margin:10px 0 !important;
+            }
+
+            &:hover {
+                a {
+                    text-decoration: underline;
+                    color:$white;
+                }
+            }
+
+            a {
+                font-size: 32px;
+                font-weight: bold;
+                display: block;
+                line-height: 100%;
+                padding: 0;
+                text-decoration: none;
+                color:$white;
+                font-family: $fira;
+                text-transform: uppercase;
+
+                @include respond(phone) {
+                    font-size: 32px;
+                }
+            }
+
+            .all-pages {
+                position: absolute;
+                bottom: 0;
+                height: 60px;
+                left: 0;
+                width: 100%;
+                padding: 0 20px;
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: flex-end;
+                display: flex;
+                font-size: 15px;
+                transition: $trans;
+                cursor: pointer;
+
+                span::before {
+                    position: relative;
+                    content: "+";
+                    margin-left: 10px;
+                    font-size: 24px;
+                    font-weight: bolder;
+                    transition: $trans;
+                    display:block;
+                }
+
+                &.active {
+                    span::before {
+                        transform:rotate(45deg);
+                    }
+                }
+            }
+
+            ul.children {
+                margin: 0;
+                list-style-type: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 40px;
+                display:none;
+                z-index: 10;
+                padding:20px 40px 40px;
+
+                li {
+                    margin:0 !important;
+                    padding:0 !important;
+                    width:100%;
+                    min-height: auto;
+                    background:none;
+                    
+                    a {
+                        font-size: 16px !important;
+                        line-height: 120%;
+                        display: inline-block;
+                        margin-bottom: 10px !important;
+                        padding: 0;
+                        font-weight: normal;
+                        text-decoration: underline;
+                        font-family: $open;
+                        text-transform: none;
+                        transition: $trans;
+
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+
+                    &::after {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-template-page-attorney-navigational {
+    article {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 35px;
+        border-bottom: 1px solid $blk;
+        margin-bottom: 35px;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+        .image-holder {
+            margin-right: 30px;
+
+            @include respond(phone) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            img {
+                border-radius: 50%;
+                max-width: 200px;
+                height: auto;
+
+                @include respond(phone) {
+                    width: 200px;
+                }
+            }
+        }
+        
+        .copy-holder {
+            a.btn {
+                margin-top: 0 !important;
+            }
+        }
+    }
+}
+
+.post-type-archive-results {
+    .main-content {
+        display:block;
+        z-index: 0;
+        position: relative;
+        
+        .column-full {
+            justify-content: flex-start;
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                color:$green;
+
+                &:not(:first-of-type) {
+                    margin-top: 80px !important;
+                }
+            }
+            
+            @include landing-box;
+        }
+    }
+}
+
+.post-type-archive-reviews {
+    .main-content {
+        .column-66 {
+            article {
+                border-bottom: 1px solid $blk;
+                margin-bottom: 35px;
+
+                h4 {
+                    margin-top: 0 !important;
+                }
+
+                .review-logo {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+.page-template-page-practice-parent {
+    .dui-block {
+        padding: 15px;
+        border: 1px solid #ccc;
+        display: block;
+        margin-bottom: 30px;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            margin-top: 5px !important;
+
+            strong {
+                background: $blue;
+                color: white;
+                padding: 5px 10px;
+            }
+        }
+
+        h5 {
+            text-transform: uppercase;
+            font-family: $fira;
+            font-size: 18px;
+            text-decoration: underline;
+            letter-spacing: 1px;
+            margin:25px 0 20px;
+            background: #efefef;
+            padding: 10px;
+        }
+    }
+}
+
+.page-id-4981 {
+    .page-item-4717,
+    .page-item-4981,
+    .page-item-4982 {
+        display: none;
+    }
+}
+
+.page-id-4982 {
+    .page-item-4982 {
+        display: none;
+    }
+}
+
+// stryder's memorial page 
+    .page-id-4702 {
+        .banner {
+            p {
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 140%;
+            }
+        }
+    }
